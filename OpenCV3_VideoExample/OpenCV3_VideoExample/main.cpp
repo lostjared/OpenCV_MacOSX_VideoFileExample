@@ -25,6 +25,7 @@ int main(int argc, char **argv) {
     writer.open(argv[2], CV_FOURCC('m', 'p', '4', 'v'), fps, cv::Size(aw, ah), true);
     if(!writer.isOpened()) {
         std::cerr << "Error could not open output video: " << argv[2] << "\n";
+	exit(EXIT_FAILURE);
     }
     bool active = true;
     cv::namedWindow("CVTest");
